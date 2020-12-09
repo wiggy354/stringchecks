@@ -1,3 +1,5 @@
+const ReadFromFiles = require('./readfromfiles')
+
 class StringChecks {
     toUpper(str) {
         if (str == null) {
@@ -63,6 +65,13 @@ class StringChecks {
         } else {
             return false
         }
+    }
+
+    concatFromFiles() {
+        const readFromFiles = new ReadFromFiles();
+        return readFromFiles.readFromFile1() + ', '
+            + readFromFiles.readFromFile2() + ', '
+            + readFromFiles.readFromFile3() + '.'
     }
 }
 
